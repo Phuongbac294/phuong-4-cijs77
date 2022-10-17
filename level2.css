@@ -112,3 +112,73 @@ body {
     border-top: 1px solid var(--border-color);
     margin-top: 5px;
 }
+
+/* CSS phần Content */
+.content {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* CSS Content__menu */
+.content__menu {
+    width: 19.8%;
+    margin: 0;
+    padding: 0;
+}
+
+.content__homework {
+    width: 79,8%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__homework-item {
+    width: 49.5%;
+    margin: 0;
+
+}
+
+/* CSS phần Footer */
+.footer {
+    width: 1220px;
+    height: 180px;
+    background-color: #333;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-menu);
+}
+
+.footer h2 {
+    font-size: 2rem;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 20px;
+    color: var(--hover-color);
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer__list {
+    width: 30%;
+    list-style: none;
+    font-size: 1.6rem;
+    padding-left: 20px;
+    line-height: 2.5rem;
+}
+
+.footer h3 {
+    margin: auto;
+    font-size: 1.4rem;
+    
+}
