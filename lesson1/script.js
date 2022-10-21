@@ -61,3 +61,21 @@ function maxN(numbers) {
 }
 
 maxN(542687525400);
+
+function reverseString(str) {
+    debugger;
+    let arr = str.split("");
+    let arrReverse = arr.reverse();
+    let newStr = arrReverse.join("");
+    return newStr;
+}
+
+reverseString('hello work');
+
+function uniq(arr) {
+    let set = new Set(arr);
+    console.log('set ', set);
+    return [...new Set(arr)];
+}
+let result = uniq([1, 2, 3, 5, 4, 2, 6, 4]);
+console.log(result);
