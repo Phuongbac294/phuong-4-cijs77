@@ -147,28 +147,227 @@
       <!-- danh sách phần đã làm và học -->
       <div class="content__menu">
         <h3>Danh sách bài làm</h3>
-        <ul class="content__menu-list menu__column">
+        <ul class="content__menu-list">
           <li class="menu__lesson-list">
             <a href="#" class="menu__lesson-item">Homework 1</a>
+          </li>
+          <li class="menu__lesson-list">
+            <a href="#" class="menu__lesson-item">Homework 2</a>
           </li>
         </ul>
       </div>
       <!-- phần nội dung làm bài -->
       <div class="content__homework">
-        <div class="content__homework-item">
-          <h3>Lesson 1 - bài 1</h3>
-          <p>
-            Cho một mảng n số nguyên. Đếm xem trong mảng có bao nhiêu số khách
-            nhau và mỗi số xuất hiện bao nhiêu lần trong mảng
-          </p>
-        </div>
-        <div class="content__homework-item">
-          <h3>Lesson 1 - bài 2</h3>
-          <p>
-            Nhập vào 1 số nguyên dương n. Tìm chữ số lớn nhất trong các chữ số
-            mà n có
-          </p>
-          <p>Ví dụ : Nhập số 123, thì số lớn nhất là 3</p>
+        <div class="content__item">
+          <div class="content__homework-item">
+            <h3>Lesson 1 - bài trắc nghiệm</h3>
+            <p>
+              <b>Câu 1:</b> var khai báo một biến có phạm vi trong block?
+            </p>
+            <form>
+              <input type="radio" id="true" name="fav_language" value="True">
+              <label for="true">True</label><br>
+              <input type="radio" id="false" name="fav_language" value="false">
+              <label for="false">False</label><br>
+            </form>
+
+            <p>
+              <b>Câu 2:</b> const khai báo một biến có phạm vi trong block?
+            </p>
+            <form>
+              <input type="radio" id="true" name="fav_language" value="True">
+              <label for="true">True</label><br>
+              <input type="radio" id="false" name="fav_language" value="false">
+              <label for="false">False</label><br>
+            </form>
+
+            <p>
+              <b>Câu 3:</b> let khai báo một biến có phạm vi trong block?
+            </p>
+            <form>
+              <input type="radio" id="true" name="fav_language" value="True">
+              <label for="true">True</label><br>
+              <input type="radio" id="false" name="fav_language" value="false">
+              <label for="false">False</label><br>
+            </form>
+
+            <p>
+              <b>Câu 4:</b> Giá trị sau cùng của obj trong ví dụ sau là gì?
+            </p>
+            <p>   const obj = { foo: 1 }</p>
+            <p>   obj.bar = 2</p>
+            <form>
+              <input type="radio" id="{foo: 1}" name="fav_language" value="{foo: 1}">
+              <label for="{foo: 1}">{foo: 1}</label><br>
+              <input type="radio" id="Error" name="fav_language" value="Error">
+              <label for="Error">Error</label><br>
+              <input type="radio" id="{foo: 1, bar: 2}" name="fav_language" value="{foo: 1, bar: 2}">
+              <label for="{foo: 1, bar: 2}">{foo: 1, bar: 2}</label><br>
+              <input type="radio" id="{foo: 1, 2: bar}" name="fav_language" value="{foo: 1, 2: bar}">
+              <label for="{foo: 1, 2: bar}">{foo: 1, 2: bar}</label><br>
+            </form>
+
+            <p>
+              <b>Câu 5:</b> Kết quả của ví dụ sau đây là gì?
+            </p>
+            <p>   const speed = 'quick</p>
+            <p>   `The ${speed} brown fox jumps over the lazy dog.`</p>
+            <form>
+              <input type="radio" id="q51" name="fav_language" value="q51">
+              <label for="q51">TypeError</label><br>
+              <input type="radio" id="q52" name="fav_language" value="q52">
+              <label for="q52">SyntaxError</label><br>
+              <input type="radio" id="q53" name="fav_language" value="q53">
+              <label for="q53">'The speed brown fox jumps over the lazy dog.</label><br>
+              <input type="radio" id="q54" name="fav_language" value="q54">
+              <label for="q54">'The quick brown fox jumps over the lazy dog.'</label><br>
+            </form>
+
+            <p>
+              <b>Câu 6:</b> Giá trị của câu lệnh obj[123] trong ví dụ sau:
+            </p>
+            <p>   const obj = {</p>
+            <p>   }</p>
+            <form>
+              <input type="radio" id="q61" name="fav_language" value="q61">
+              <label for="q61">undefined</label><br>
+              <input type="radio" id="q62" name="fav_language" value="q62">
+              <label for="q62">‘party!’</label><br>
+            </form>
+
+            <p>
+              <b>Câu 7:</b> Giá trị của array trong ví dụ sau:
+            </p>
+            <p> const array = [1, 2, 3]</p>
+            <p> const extension = [4, 5, 6]</p>
+            <p> array = [...extension, ...array]</p>
+            <form>
+              <input type="radio" id="q71" name="fav_language" value="q71">
+              <label for="q71">[1, 2, 3]</label><br>
+              <input type="radio" id="q72" name="fav_language" value="q72">
+              <label for="q72">[1, 2, 3, 4, 5, 6]</label><br>
+              <input type="radio" id="q73" name="fav_language" value="q73">
+              <label for="q73">[4, 5, 6, 1, 2, 3]</label><br>
+              <input type="radio" id="q74" name="fav_language" value="q74">
+              <label for="q74">Error</label><br>
+            </form>
+            
+            <p>
+              <b>Câu 8:</b> Giá trị của a trong ví dụ sau?
+            </p>
+            <p> function mystery(...params) {</p>
+            <p> return params }</p>
+            <p> let a = mystery(1, 23, 4);</p>
+            <form>
+              <input type="radio" id="q81" name="fav_language" value="q81">
+              <label for="q81">undefined</label><br>
+              <input type="radio" id="q82" name="fav_language" value="q82">
+              <label for="q82">[1, 23, 4]</label><br>
+              <input type="radio" id="q83" name="fav_language" value="q83">
+              <label for="q83">“1 23 4”</label><br>
+              <input type="radio" id="q84" name="fav_language" value="q84">
+              <label for="q84">1 23 4</label><br>
+            </form>
+
+            <p>
+              <b>Câu 9:</b>  Giá trị của biểu thức sau?
+            </p>
+            <p> [...[..."..."]].length</p>           
+            <form>
+              <input type="radio" id="q91" name="fav_language" value="q91">
+              <label for="q91">3</label><br>
+              <input type="radio" id="q92" name="fav_language" value="q92">
+              <label for="q92">6</label><br>
+              <input type="radio" id="q93" name="fav_language" value="q93">
+              <label for="q93">9</label><br>
+              <input type="radio" id="q94" name="fav_language" value="q94">
+              <label for="q94">Error</label><br>
+            </form>
+
+            <p>
+              <b>Câu 10:</b> Giá trị của a và b với ví dụ sau?
+            </p>
+            <p> let a = 12, b = 3;</p>
+            <p> [a, b] = [b, a];</p>
+            <form>
+              <input type="radio" id="q101" name="fav_language" value="q101">
+              <label for="q101">a = 12, b = 3</label><br>
+              <input type="radio" id="q102" name="fav_language" value="q102">
+              <label for="q102">a = 3, b = 12</label><br>
+              <input type="radio" id="q103" name="fav_language" value="q103">
+              <label for="q103">a = 12, b = 12</label><br>
+              <input type="radio" id="q104" name="fav_language" value="q104">
+              <label for="q104">a = 3, b = 3</label><br>
+            </form>
+
+            <p>
+              <b>Câu 11:</b> Giá trị của obj sau trong ví dụ sau?
+            </p>
+            <p> const obj = {</p>
+            <p> name: "MindX" }</p>
+            <p>const sayHello = (x) => {</p>
+            <p>let {name} = x</p>
+            <p>name = "Code Intensive" }</p>
+            <p>sayHellO(obj)</p>
+            <form>
+              <input type="radio" id="q111" name="fav_language" value="q111">
+              <label for="q111">{name: “MindX”}</label><br>
+              <input type="radio" id="q112" name="fav_language" value="q112">
+              <label for="q112">{name: “Code Intensive”}</label><br>
+              <input type="radio" id="q113" name="fav_language" value="q113">
+              <label for="q113">Error</label><br>
+            </form>
+
+            <p>
+              <b>Câu 12:</b> Giá trị của biểu arr trong ví dụ sau?
+            </p>
+            <p> let arr = [1, 2, 3, 4, 5]</p>
+            <p> arr.map(item => {</p>
+            <p> if (item % 2 === 0) {</p>
+            <p> return item; }</p>
+            <p>return item * 2; } }</p>
+            <form>
+              <input type="radio" id="q121" name="fav_language" value="q121">
+              <label for="q121">[1, 2, 3, 4, 5]</label><br>
+              <input type="radio" id="q122" name="fav_language" value="q122">
+              <label for="q122">[2, 2, 6, 4, 10]</label><br>
+              <input type="radio" id="q123" name="fav_language" value="q123">
+              <label for="q123">[2, 4, 6, 8, 10]</label><br>
+            </form>
+
+            <p>
+              <b>Câu 13:</b> Giá trị của total trong ví dụ sau?
+            </p>
+            <p> const arr = [1, 2, 3, 4, 5]</p>
+            <p> const total = arr.filter(item => item % 2 === 0)</p>
+            <p> .reduce((value, item) => value + item , 10)</p>
+            <form>
+              <input type="radio" id="q131" name="fav_language" value="q131">
+              <label for="q131">Error</label><br>
+              <input type="radio" id="q132" name="fav_language" value="q132">
+              <label for="q132">15</label><br>
+              <input type="radio" id="q133" name="fav_language" value="q133">
+              <label for="q133">6</label><br>
+              <input type="radio" id="q134" name="fav_language" value="q134">
+              <label for="q134">16</label><br>
+            </form>
+
+          </div>
+          <div class="content__homework-item">
+            <h3>Lesson 1 - bài 1</h3>
+            <p>
+              Cho một mảng n số nguyên. Đếm xem trong mảng có bao nhiêu số khách
+              nhau và mỗi số xuất hiện bao nhiêu lần trong mảng
+            </p>
+          </div>
+          <div class="content__homework-item">
+            <h3>Lesson 1 - bài 2</h3>
+            <p>
+              Nhập vào 1 số nguyên dương n. Tìm chữ số lớn nhất trong các chữ số
+              mà n có
+            </p>
+            <p>Ví dụ : Nhập số 123, thì số lớn nhất là 3</p>
+          </div>          
         </div>
       </div>
     </div>

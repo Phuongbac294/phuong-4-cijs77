@@ -38,9 +38,8 @@ body {
     line-height: 2rem;
     box-shadow: 0 1px 10px var(--border-color);
     border-radius: 3px;
-    z-index: 1;
     overflow: auto;
-
+    
 }
 .menu__column li {
     padding: 5px 14px 0px;
@@ -103,6 +102,7 @@ body {
     top: 40px;
     left: 0px;
     display: none;
+    
 }
 .header__menu-item:hover .menu__lesson {
     display: block;
@@ -123,23 +123,77 @@ body {
 }
 /* CSS Content__menu */
 .content__menu {
-    width: 19.8%;
-    margin: 0;
+    width: 20%;
+    margin: 10px 0;
     padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.content__menu h3 {
+    text-transform: uppercase;
+    padding: 14px;
+    margin: 0;
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content__menu-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 14px;
+}
+
+.menu__lesson-list {
+    padding-top: 10px;
+}
+
+.menu__lesson-list a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.menu__lesson-list a:hover {
+    color: var(--hover-color);
 }
 
 .content__homework {
-    width: 79,8%;
+    width: 80%;
     margin: 0;
     padding: 0;
     display: flex;
+    
+}
+
+.content__item {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 10px;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
 .content__homework-item {
     width: 49.5%;
-    margin: 0;
+    margin: 10px 0 0;
+    padding-left: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1.4rem;
 
+}
+.content__homework-item h3 {
+    text-transform: uppercase;
+    padding-left: 14px;
+    font-size: 1.5rem;
+
+}
+
+.content__homework-item p {
+    font-size: 1.4rem;
 }
 
 /* CSS phần Footer */
