@@ -67,10 +67,29 @@ console.log(arr);
 //  Bài 1: viết function đâỏ ngược dòng chữ
 
 function reverse(str) {
-    let str1 = str;
-    let arr = str.split("");
-    let arr1 = arr.reverse();
-    let str2 = arr1.toString();
+    let arr = str.split("");                        // chuyển chuỗi sang mảng
+    let arr1 = arr.reverse();                       // lật ngược mảng
+    let str2 = arr1.toString().replace(/,/g , '');  // chuyển mảng thành chuỗi và loại bỏ các dấu phẩy trong chuỗi
     console.log(str2);
 }
-reverse('abcdef');
+reverse('abcdefkl');
+
+
+// let reverse1 = 'str' => 'str'.split("").reverse().toString().replace(/,/g, '')
+
+// reverse1('abcdefg');
+// console.log(reveser1());
+
+function reverse2(str) {
+    let str1 = str.split("").reverse().toString().replace(/,/g , ''); // láy chuối 
+    console.log(str1); 
+}
+reverse2('abcdefg');
+// console.log(reverse2());
+
+function reverse3(str) {
+    let str3 = str.split("").reverse().join("");                                 // láy chuối
+    console.log(str3);
+}
+reverse3('abcdefgokr');
+// console.log(reverse3());
