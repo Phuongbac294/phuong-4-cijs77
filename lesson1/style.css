@@ -1,0 +1,35 @@
+.homework {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    font-size: 20px;
+}
+.homework__item {
+    margin: 0;
+    padding-left: 30px;
+}
+.btn {
+    min-width: 100px;
+    height: 30px;
+    padding: auto 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 100px;
+}
+.btn:hover {
+    background-color: aqua;
+}
+
+.btn_green {
+    background-color: greenyellow;
+}
+
+.btn_yellow {
+    background-color: yellow;
+}
+label {
+    min-width: 120px;
+    display: inline-block;
+}
