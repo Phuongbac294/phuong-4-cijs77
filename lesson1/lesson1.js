@@ -93,3 +93,30 @@ function reverse3(str) {
 }
 reverse3('abcdefgokr');
 // console.log(reverse3());
+
+function numbersum() {
+    let a = parseInt(document.getElementsByClassName('fristNumber')[0].value);
+    let b = parseInt(document.getElementsByClassName('fristNumber')[1].value);
+    let text = document.getElementsByClassName('lesson1')[0];
+    let z = a + b ;
+    // const print = document.createElement('p');
+    // print.innerHTML = 'Tổng của hai số ' + a + ' và ' + b + ' là:' + a + ' + ' + b + ' = ' + z;
+    text.innerText = 'Tổng của hai số ' + a + ' và ' + b + ' là: ' + a + ' + ' + b + ' = ' + z;
+    // document.getElementsByClassName('homework__item')[0].appendChild(print);
+}
+
+function numbersub() {
+    let a = parseInt(document.getElementsByClassName('fristNumber')[0].value);
+    let b = parseInt(document.getElementsByClassName('fristNumber')[1].value);
+    let z = a - b ;
+    let text = document.getElementsByClassName('lesson1')[1];
+    // const print = document.createElement('p');
+    if (z >= 0) {
+        // print.innerHTML = a + ' - ' + b + ' = ' + z;
+        text.innerText = 'Hiệu của hai số ' + a + ' và ' + b + ' là: ' + a + ' - ' + b + ' = ' + z;
+        // document.getElementsByClassName('homework__item')[0].appendChild(print);
+    } else {
+        text.style.color = "red";
+        text.innerText = a + ' nhỏ hơn ' + b + ' nên không trừ được.'
+    }
+}
