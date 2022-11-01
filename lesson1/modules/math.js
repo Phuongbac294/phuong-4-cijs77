@@ -1,8 +1,4 @@
-const sum = (a, b) => a + b
-const sub = (a, b) => a - b
-const reverse = (str) => {
-    let str = str.split("").reverse().join("");                                
-    console.log(str);
-}
-export {sum, sub, reverse}; // export module
+const sum = (a, b) => a + b;
+const sub = (a, b) => a - b;
+const reverset = (str) => str.split("").reverse().join("");
 export const version = 'myMath 1.0'

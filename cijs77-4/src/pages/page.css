@@ -1,0 +1,52 @@
+.Page {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid rgb(71, 68, 68);
+    border-top-style: none; */
+    box-sizing: border-box;
+}
+
+.Page__menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid rgb(71, 68, 68);
+    box-sizing: border-box;
+    border-top-style: none;
+}
+
+.Page__menu-h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.Page__menu-item-list {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Page__menu-item {
+
+}
+
+.Page__menu-item-list:hover {
+    background-color: rgb(51, 64, 59);
+}
+
+.Page__list {
+    max-width: 1010px;
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid rgb(71, 68, 68);
+    box-sizing: border-box;
+    border-top-style: none;
+}

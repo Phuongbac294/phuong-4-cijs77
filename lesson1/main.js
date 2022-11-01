@@ -23,8 +23,8 @@ function numbersub() {
 }
 
 function reverseText() {
-    let string = parseInt(document.getElementsByClassName('fristtext')[0].value);
-    let text = document.getElementsByClassName('lesson1')[2];
-    text.innerText = 'Kết quả đảo ngược của chuỗi ' + string + ' là : ' + reverse(string);
-
+    let str = document.getElementsByClassName('fristtext')[0].value;
+    let text = document.createElement('p');
+    text.innerText = 'Kết quả đảo ngược của chuỗi ' + str + ' là : ' + reverse(str);
+    document.getElementsByClassName('homework__item')[1].appendChild(text);
 }
