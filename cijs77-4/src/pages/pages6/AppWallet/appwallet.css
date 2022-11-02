@@ -1,0 +1,10 @@
+.btn-violet {
+    padding: 8px 20px;
+    border-radius: 12px;
+    background-color: #862796;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border-style: none;
+    box-shadow: 0px 2px rgb(103, 97, 97);
+}
