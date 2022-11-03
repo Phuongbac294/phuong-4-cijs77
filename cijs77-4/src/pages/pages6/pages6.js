@@ -1,8 +1,8 @@
 import './pages6.css';
 import AppHeader from './AppWallet/appheader.js'
 import AppCharContainer from './AppWallet/appcharcontainer';
-import AppExpenseItem from './AppWallet/appexpenseitem';
 import AppFilter from './AppWallet/appfilter';
+import AppExpense from './AppWallet/appexpens';
 
 
 export default function Pages6() {
@@ -10,13 +10,11 @@ export default function Pages6() {
         <div className='pages6'>
             <h3>APP quản lý chi tiêu</h3>
             <div className='appWallet'>
-                <div className='appWallet__header'>
-                    <AppHeader />
-                </div>
+                <AppHeader />                
                 <div className='appWallet__container'>
                     <AppFilter />
                     <AppCharContainer />
-                    <AppExpenseItem />
+                    <AppExpense />
                 </div>
             </div>
         </div>

@@ -1,3 +1,16 @@
+/* CSS Header */
+.appWallet__header {
+    width: 100%;
+    min-height: 100px;
+    border-radius: 12px;
+    background-color: #897BDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
 .btn-violet {
     padding: 8px 20px;
     border-radius: 12px;
@@ -7,4 +20,248 @@
     color: white;
     border-style: none;
     box-shadow: 0px 2px rgb(103, 97, 97);
+}
+
+.btnappnew {
+    /* display: none; */
+}
+
+.addNewExpense {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    text-align: end;
+    display: none;
+}
+
+.addNewExpense label {
+    font-size: 20px;
+    width: 20%;
+    text-align: left;
+}
+
+.addNewExpense input {
+    font-size: 20px;
+    /* flex: 1; */
+    width: 80%;
+    line-height: 26px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.btn-add {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #862796;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+.btn-cancel {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #a39ca4;
+    color: #000000;
+    margin-left: 20px;
+    text-transform: uppercase;
+    
+}
+
+
+/* CSS Filter */
+.appfilter {
+    width: 100%;
+    height: 55px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.filter__year {
+    width: 171px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center; 
+    position: relative;
+    /* margin-right: 0; */
+}
+.filter__year:hover .filter__year-list {
+    display: block;
+}
+
+.filter__year-item {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    
+}
+
+.filter__year-item::before {
+    position: absolute;
+    content: "";
+    border: 13px solid transparent;
+    border-top:10px solid #000000;
+    top: 20px;
+    right: 10px;
+}
+
+.filter__year-list {
+    position: absolute;
+    top: 0;
+    list-style: none;
+    width: 170px;
+    margin: 0;    
+    padding: 0;
+    background-color: #ffff;
+    box-shadow: 0px 1px 3px;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.filter__year-list-item {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filter__year-list-item:nth-child(1) {
+    border-radius: 5px 5px 0 0;
+}
+
+.filter__year-list-item:nth-last-child(1) {
+    border-radius: 0 0 5px 5px;
+}
+
+.filter__year-list-item:hover {
+    background-color: #aac8bf;
+}
+
+/* CSS AppCharContainer */
+.appcharcontainer {
+    width: 100%;
+    height: 198px;
+    background-color: #E1CAE4;
+    border-radius: 12px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.char-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+}
+
+.char-item-bak {
+    width: 21px;
+    height: 139px;
+    border-radius: 50vw;
+    background-color: #BAA5ED;
+    position: relative;
+    /* animation: move linear; */
+}
+
+.char-item-bak::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    border-radius: 0 0 50vw 50vw;
+    height: 50%; /* chuyền phần chăm chi tiêu vào đây*/
+    background-color: #3D15A9;
+    bottom: 0;
+    left: 0;
+    /* animation: animate 2s linear infinite; */
+
+}
+
+@keyframes move {
+   0% {bottom: 0px; background-color: #3D15A9;}
+   100% {bottom: 100px; background-color: #3D15A9;}
+}
+
+.char-item p {
+    margin: 0;
+    font-size: 12px;
+    color: #000000;
+}
+/* CSS AppExpenseItem */
+.appexpenseitem {
+    width: 100%;
+    height: 134px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #575757;
+    border-radius: 12px;
+    display: flex;
+    
+    align-items: center; 
+}
+
+.appexpenseitem-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 114px;
+    height: 114px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+}
+
+.appexpenseitem-left p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.appexpenseitem-left p:nth-last-child(1) {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.appexpenseitem-center {
+    margin: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    flex: 1;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.appexpenseitem-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin: 0;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    background-color: #862796;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
 }
