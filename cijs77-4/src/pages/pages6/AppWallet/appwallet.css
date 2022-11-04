@@ -31,7 +31,7 @@
     margin: 0;
     padding: 20px;
     text-align: end;
-    display: none;
+    /* display: none; */
 }
 
 .addNewExpense label {
