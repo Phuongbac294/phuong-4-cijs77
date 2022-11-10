@@ -2,15 +2,15 @@ import './appwallet.css';
 import { useState } from 'react';
 
 export default function AppHeader() {
-    const [addTrue, setAddTrue] = useState(false)
+    const [addTrue, setAddTrue] = useState(true)
        
     return (
         <div className="appWallet__header">
-            {addTrue === false ?
+            {addTrue === true ?
             <button 
                 type='button' 
                 className='btn btn-violet btnappnew' 
-                onClick={() => setAddTrue(true)} >
+                onClick={() => setAddTrue(false)} >
                     Add new expense 
             </button>
             :
@@ -22,7 +22,7 @@ export default function AppHeader() {
                 <label for="date">Date</label>
                 <input type="date" name="date" placeholder='Enter date here' className='date'></input><br></br>
                 <button type='submit' className='btn btn-add' >Add</button>
-                <button type='button' className='btn btn-cancel' onClick={() => setAddTrue(false)}>Cancel</button>
+                <button type='button' className='btn btn-cancel' onClick={() => setAddTrue(true)}>Cancel</button>
             </from>
             }
         </div>
