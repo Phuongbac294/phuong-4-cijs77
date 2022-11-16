@@ -1,0 +1,110 @@
+.pages9 {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pages9-header {
+    height: 30px;
+    margin: 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgb(146, 140, 140);
+
+}
+
+.pages9-home {
+    height: 100%;
+    min-width: 100px;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    
+}
+
+.pages9-register,
+.pages9-list {
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+}
+
+.pages9-container {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 300px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.form-register {
+    width: 250px;
+    height: 120px;
+    border: 1px solid rgb(146, 140, 140);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-register h4 {
+    margin: 0;
+    width: 100%;
+    padding: 10px auto;
+    text-transform: uppercase;
+    background-color: rgb(146, 140, 140);
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    /* box-sizing: border-box; */
+    text-align: center;
+    
+}
+
+.input-name {
+    border: 1px solid rgb(146, 140, 140);
+    border-radius: 3px;
+    font-size: 12px;
+    height: 20px;
+    
+}
+
+.btn-sumbit {
+    min-width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(139, 139, 227);
+    border-style: none;
+    font-size: 10px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.pages9-footer {
+    height: 30px;
+    margin: 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(146, 140, 140);
+}
+
+.pages9-option {
+    min-width: 100px;
+    height: 70%;
+}

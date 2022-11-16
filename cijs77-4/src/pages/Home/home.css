@@ -29,9 +29,10 @@
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    box-sizing: border-box;
+    box-sizing: border-box;   
 }
 
 .Home__list-item:hover {
     background-color: rgb(145, 185, 145);
 }
+
