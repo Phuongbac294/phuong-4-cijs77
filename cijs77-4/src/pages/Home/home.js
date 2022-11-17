@@ -1,10 +1,7 @@
 import './home.css';
-<<<<<<< HEAD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
-=======
 import { useState } from 'react';
->>>>>>> 2a08c18b8184f868a95c1862881275060c54da38
 
 
 function Home() {

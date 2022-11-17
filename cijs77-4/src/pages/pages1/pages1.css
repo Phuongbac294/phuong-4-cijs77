@@ -3,12 +3,16 @@
     margin: 0 auto 10px;
     padding: 20px;
     font-size: 20px;
-<<<<<<< HEAD
-    
-=======
-    /* display: none; */
->>>>>>> 2a08c18b8184f868a95c1862881275060c54da38
 }
+
+.homework h3 {
+    cursor: pointer;
+}
+
+.homework h3:hover {
+    color: red;
+}
+
 .homework__item {
     margin: 0;
     padding-left: 30px;

@@ -2,13 +2,10 @@ import './appwallet.css';
 import { useState } from 'react';
 
 export default function AppHeader() {
-    const [addTrue, setAddTrue] = useState(true)
-<<<<<<< HEAD
+    const [addTrue, setAddTrue] = useState(true);
     // const [expense, setExpense] = useState({date:, purchase :, amount:})
     // const a
-=======
->>>>>>> 2a08c18b8184f868a95c1862881275060c54da38
-       
+    
     return (
         <div className="appWallet__header">
             {addTrue === true ?
