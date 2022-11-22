@@ -5,18 +5,8 @@ import { useState } from 'react';
 
 
 function Home() {
-  const [ison, setIson] = useState(true);
-  // const use = {
-  //   name : '',
-  //   email : '',
-  //   phone : '',
-  //   address : '',
-  //   city : '',
-  //   password : '',
-  //   confirmPassword : '',
-  // }
+    const [ison, setIson] = useState(true);  
 
-  
     return (
         <div className="Home">
           <ul className="Home__list">

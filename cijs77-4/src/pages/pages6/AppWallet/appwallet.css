@@ -1,4 +1,5 @@
 /* CSS Header */
+
 .appWallet__header {
     width: 100%;
     min-height: 100px;
@@ -9,6 +10,9 @@
     align-items: center;
     box-sizing: border-box;
     margin-bottom: 40px;
+    padding: 20px;
+    /* flex: 1; */
+   
 }
 
 .btn-violet {
@@ -201,6 +205,11 @@
     color: #000000;
 }
 /* CSS AppExpenseItem */
+.appexpensr {
+    overflow: hidden;
+    overflow-y: auto;
+    /* flex : 1; */
+}
 .appexpenseitem {
     width: 100%;
     height: 134px;

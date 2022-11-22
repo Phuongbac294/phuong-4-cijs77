@@ -20,25 +20,25 @@ function Pages1() {
 
  
     const HandlePage1Sumbit = (event) => {
-        event.preventdefault();
-        setStringpage1('');
+        event.preventdefault();        
         setResult([
             ...Result,
             stringpage1,
-        ])        
-      
+        ]); 
+        console.log(Result);       
+        setStringpage1('');
      }
      
-     const Resultlist = Result.map(item => {
-        return (            
-            <p>Kêt quả đảo ngược của chuỗi kỹ tự 
-                <span style={{color :'red'}}> {item}</span> là : 
-                <span style={{color :'violet'}}> {Reverset(item)}</span>
-            </p>
-        );
-     })
+     const Resultlist = Result.map(item => { return <li>{item}</li>
+        // return (            
+        //     <li>Kêt quả đảo ngược của chuỗi kỹ tự 
+        //         <span style={{color :'red'}}> {item}</span> là : 
+        //         <span style={{color :'violet'}}> {Reverset(item)}</span>
+        //     </li>
+        // );
+     });
  
-    
+    console.log(Result);
     return (
         <div className='homework'>
             <h3 onClick={() => setOnpage1(1)}>Bài 1a : Đảo ngược các ký tự cách 1</h3>
@@ -56,7 +56,7 @@ function Pages1() {
                     <button type='sumbit' className='btn btn_green'>ReverseText</button>
                 </form>
             }
-            {Resultlist}
+            <ul>{Resultlist}</ul>
 
             <Input/>
         </div>

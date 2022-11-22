@@ -1,4 +1,4 @@
-// import './pages1.css';
+
 
 
 function Pages2() {

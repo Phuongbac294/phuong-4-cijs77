@@ -21,8 +21,6 @@ function Page() {
         );
     });
 
-    console.log(page.item);
-    // console.log(Arrlesson);
     return (
         <div className='Page'>
             <div className='Page__menu'>

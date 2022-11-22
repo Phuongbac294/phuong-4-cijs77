@@ -6,21 +6,30 @@ export default function Pages9Container() {
         email : '',
         passwork : '',
     })
-
+    const [datause, setDatause] = useState([])
     const Register = (event) => {
         event.preventDefault(); 
-        return ('Xin chào ', user.name)
+        setDatause([
+            ...datause,
+            user,
+        ])
+        setUser({
+            name : '',
+            email : '',
+            passwork : '',
+        })
         };
     
     const RegisterValue = (event) => {
         const value = event.target.value;
         const key = event.target.name;
         setUser({
-            ... user,
+            ...user,
             [key] : value,
         })
     }
 
+    console.log(datause);
     
 
     return (

@@ -3,31 +3,33 @@ import {useState} from 'react'
 export default function Input() {
 	
 	const [input, setInput] = useState("")
-	
-	
+	const [str, setStr] = useState([]);
 
 	const handleInputChange = (event) => {
 		setInput(event.target.value)
-	}
-
-    const write = (str) => {
-        return ('thử nghiệm', str);
-    }
+	} 
     
     const handleSubmit = (event) => {
 		event.preventDefault();
+		setStr([
+			...str,
+			input,
+		])
 		console.log(input);
-		// setInput("");
-       
-	}
+		setInput("");       
+	};
+
+	const ListStr = str.map(item => {
+        return <li value={item} >{item}</li>});
+  
     
 	return (
-        <>
-		<form onSubmit={handleSubmit}>
-			<input type="text" value={input} onChange={handleInputChange} />
-			<button type="submit">Submit</button>
-		</form>
-        <p>{write(input)}</p>
-        </>
-	)
-}
+        <div>
+			<form onSubmit={handleSubmit}>
+				<input type="text" value={input} onChange={handleInputChange}></input>
+				<button type="submit">Submit</button>
+			</form>
+			<ul>{ListStr}</ul>
+		</div>
+	);
+};
