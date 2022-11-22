@@ -17,6 +17,7 @@ export default function Pages6() {
                     <AppExpense />
                 </div>
             </div>
+            {/* <div style="width: 800px;"><canvas id="acquisitions"></canvas></div> */}
         </div>
     );
     

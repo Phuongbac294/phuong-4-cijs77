@@ -2,7 +2,7 @@
 
 .appWallet__header {
     width: 100%;
-    min-height: 100px;
+    /* min-height: 100px; */
     border-radius: 12px;
     background-color: #897BDA;
     display: flex;
@@ -11,7 +11,7 @@
     box-sizing: border-box;
     margin-bottom: 40px;
     padding: 20px;
-    /* flex: 1; */
+    
    
 }
 
@@ -35,7 +35,7 @@
     margin: 0;
     padding: 20px;
     text-align: end;
-    /* display: none; */
+    flex: 1;
 }
 
 .addNewExpense label {
@@ -176,23 +176,33 @@
     width: 21px;
     height: 139px;
     border-radius: 50vw;
-    background-color: #BAA5ED;
+    background-color: #7646f2;
     position: relative;
+    padding: 0;
     /* animation: move linear; */
 }
 
-.char-item-bak::before {
+.char-item-down {
+    width: 21px;
+    /* height: 30%; */
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+    background-color: #BAA5ED;
+    margin: 0;
+}
+
+/* .char-item-bak::before {
     position: absolute;
     content: '';
     width: 100%;
     border-radius: 0 0 50vw 50vw;
     height: 50%; /* chuyền phần chăm chi tiêu vào đây*/
-    background-color: #3D15A9;
+    /* background-color: #3D15A9;
     bottom: 0;
-    left: 0;
+    left: 0; */
     /* animation: animate 2s linear infinite; */
 
-}
+/* } */ 
 
 @keyframes move {
    0% {bottom: 0px; background-color: #3D15A9;}
@@ -206,9 +216,10 @@
 }
 /* CSS AppExpenseItem */
 .appexpensr {
+    margin-top: 20px;
     overflow: hidden;
     overflow-y: auto;
-    /* flex : 1; */
+    
 }
 .appexpenseitem {
     width: 100%;
