@@ -1,24 +1,19 @@
 import './appwallet.css';
+import { useState, memo } from 'react';
 
 
-export default function AppCharContainer() {
-    const arrmonth = [
-        {id : 'Jan' , spend : 1200, income : 1500},
-        {id : 'Feb' , spend : 1200, income : 1500},
-        {id : 'Mar' , spend : 1000, income : 1500},
-        {id : 'Apr' , spend : 800, income : 1500},
-        {id : 'May' , spend : 1200, income : 1500},
-        {id : 'Jun' , spend : 900, income : 1500},
-        {id : 'Jul' , spend : 1200, income : 1500},
-        {id : 'Aug' , spend : 1200, income : 1500},
-        {id : 'Sep' , spend : 1600, income : 1500},
-        {id : 'Oct' , spend : 1200, income : 1500},
-        {id : 'Nov' , spend : 100, income : 1500},
-        {id : 'Dec' , spend : 1200, income : 1500},
-    ]
-    const CharMonth = (prors) => {
+ function AppCharContainer({chart}) {
+    // const Arryear = [];
+    // Arryear = expenses.filter((item)=> {
+    //     for ( let i=0; i<expenses.lenght; i++)
+    //     if (item.date = {year}) {
+    //         return true;
+    //     }
+    // });
+    // console.log(Arryear);
+       const CharMonth = (prors) => {
         const percent = (1 - (prors.spend/prors.income)) * 100
-        console.log(percent);
+      
         return (
             <div className="char-item">
                 <div className="char-item-bak">
@@ -30,7 +25,9 @@ export default function AppCharContainer() {
     }
     return (
         <div className='appcharcontainer'>
-            {arrmonth.map(item => CharMonth(item))}
+            {chart.map(item => CharMonth(item))}
         </div>
     );
 }
+
+export default memo(AppCharContainer);

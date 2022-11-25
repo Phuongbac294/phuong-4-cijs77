@@ -1,25 +1,25 @@
+import { memo } from 'react';
 import './appwallet.css';
 
-export default function AppFilter() {
+ function AppFilter({ HanldeCchart}) {
     const d = new Date().getFullYear(); 
-    const Year = () => {
-        
-    }
+   
     return (
         <div className='appfilter'>
             <p>Filter by year</p>          
             <div className='filter__year'>
-                <p className='filter__year-item'>{d}</p>
-                <ul className='filter__year-list'>
-                    <li className='filter__year-list-item' onClick={Year}>{d}</li>
-                    <li className='filter__year-list-item'>{d-1}</li>
-                    <li className='filter__year-list-item'>{d-2}</li>
-                    <li className='filter__year-list-item'>{d-3}</li>
-                    <li className='filter__year-list-item'>{d-4}</li>
-                </ul>
+            <select id="cars" onChange={HanldeCchart}>
+                <option value={d} selected >{d}</option>
+                <option value={d-1}>{d-1}</option>
+                <option value={d-2}>{d-2}</option>
+                <option value={d-3}>{d-3}</option>
+                <option value={d-4}>{d-4}</option>
+                <option value={d-5}>{d-5}</option>                
+            </select>
             </div>
             
         </div>
     );
 }
 
+export default memo(AppFilter);
