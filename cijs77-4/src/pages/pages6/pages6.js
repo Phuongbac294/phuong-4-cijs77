@@ -34,8 +34,10 @@ export default function Pages6() {
         {id : 'Nov' , spend : 100, income : 1500},
         {id : 'Dec' , spend : 1200, income : 1500},
     ])
+    const [yearMonth, setYearMonth] = useState([])
     const HanldeCchart =(e) => {
         setYear(e.target.value)
+        setYearMonth()
         // setChart()
     }
     console.log(year);

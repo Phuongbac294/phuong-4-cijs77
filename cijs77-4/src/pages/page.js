@@ -10,9 +10,13 @@ import Pages6 from './pages6/pages6';
 import Pages7 from './pages7/pages7';
 import Pages8 from './pages8/pages8';
 import Pages9 from './pages9/pages9';
+import Pages12 from './page12/pages12';
+import Pages13 from './page13/pages13';
+import Context from './context/context';
+import { ThemeProvider } from "./context/ThemeContext";
 
 function Page() {
-    const ArrLesson = ['Bài 1', 'Bài 2', 'Bài 3', 'Bàì 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9'];
+    const ArrLesson = ['Bài 1', 'Bài 2', 'Bài 3', 'Bàì 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9','Bài 12', 'Bài 13', 'Context'];
     const [page, setPage] = useState(ArrLesson[0]);
     const [ison, setIson] = useState(true);
     const ListItem = ArrLesson.map(item => {
@@ -41,7 +45,13 @@ function Page() {
                 {page.item === ArrLesson[6] && <Pages7/>}
                 {page.item === ArrLesson[7] && <Pages8/>}
                 {page.item === ArrLesson[8] && <Pages9/>}
-                
+                {page.item === ArrLesson[9] && <Pages12/>}
+                {page.item === ArrLesson[10] && <Pages13/>}
+                {page.item === ArrLesson[11] && 
+                <ThemeProvider>
+                    <Context/>
+                </ThemeProvider>
+                }
             </div>
         </div>
 
