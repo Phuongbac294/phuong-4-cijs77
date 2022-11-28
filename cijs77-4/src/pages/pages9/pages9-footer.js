@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import {LanguageContext} from './Storepage9/context'
+import Context from "./Storepage9/context";
 
 
 export default function Pages9Footer() {
-    const toogle = useContext(LanguageContext)
+    const toogle = useContext(Context)
     
     return (
         <div className="pages9-footer">
             <select className="pages9-option" name="option" onChange={toogle.SelectLanguage}>                
-                <option value={toogle.languages[0].id}>{toogle.languages[0].id}</option>
-                <option value={toogle.languages[1].id}>{toogle.languages[1].id}</option>                
+                <option value='Vi'>Vi</option>
+                <option value='En'>En</option>                
             </select>
             
         </div>

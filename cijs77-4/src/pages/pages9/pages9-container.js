@@ -1,47 +1,23 @@
-import { useState } from "react";
+import { useContext } from "react";
+import Context from "./Storepage9/context";
 
 export default function Pages9Container() {
-    const [user, setUser] = useState({
-        name : '',
-        email : '',
-        passwork : '',
-    })
-    const [datause, setDatause] = useState([])
-    const Register = (event) => {
-        event.preventDefault(); 
-        setDatause([
-            ...datause,
-            user,
-        ])
-        setUser({
-            name : '',
-            email : '',
-            passwork : '',
-        })
-        };
+    const contai = useContext(Context)
     
-    const RegisterValue = (event) => {
-        const value = event.target.value;
-        const key = event.target.name;
-        setUser({
-            ...user,
-            [key] : value,
-        })
-    }
-
-    console.log(datause);
-    
-
+   
     return (
         <div className="pages9-container">
-            <form className="form-register" onSubmit={Register}>
-                <h4>Đăng nhập</h4>
+            {contai.login === 0 &&
+            <form className="form-register">                
+                <h4>{contai.language[0].login}</h4>
                 <div>
-                <input className="input-name" type='text' name='name' value={user.name} placeholder="Usename" onChange={RegisterValue }></input><br></br>
-                <input className="input-name" type='passwork' name='passwork' value={user.passwork} placeholder="Passwork" onChange={RegisterValue }></input>
+                <input className="input-name" type='text' name={Object.keys(contai.use)[0]} value={contai.use.usename} placeholder={contai.language[0].usename} onChange={contai.RegisterValue }></input><br></br>
+                <input className="input-name" type='passwork' name={Object.keys(contai.use)[1]} value={contai.use.passwork} placeholder={contai.language[0].passwork} onChange={contai.RegisterValue }></input>
                 </div>
-                <button type="sumbit" className="btn-sumbit">Đăng nhập</button>
-            </form>
+                <button type="sumbit" className="btn-sumbit" onClick={contai.LoginUse}>{contai.language[0].login}</button>
+            </form>}
+            {contai.login === 1 && <h1>{contai.language[0].greet + contai.use.usename}</h1>}
+            {contai.login === 2 && <h1>{contai.language[0].error}</h1>}
         </div>
     );
 }
