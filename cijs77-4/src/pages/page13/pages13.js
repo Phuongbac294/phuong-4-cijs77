@@ -4,11 +4,13 @@ import './pages13.css';
 // 1. Init state
 const initState = {
     job : '',
+    amount : 0,
     jobs : []
 }
 
 // 2. Action
 const SET_JOB = 'set_job'
+const GET_AMOUNT = 'get_amount'
 const ADD_JOB = ' add_job'
 const DELETE_JOB = 'delete_job'
 
@@ -18,10 +20,17 @@ const setJob = payload => {         // payload - dữ liệu mang theo
         payload
     }
 }
+const getAmount = payload => {         
+    return {
+        type : GET_AMOUNT,
+        payload
+    }
+}
 const addJob = payload => {         
     return {
         type : ADD_JOB,
-        payload
+        name : payload.job,
+        amount : payload.amount
     }
 }
 const deleteJob = payload => {         
@@ -33,47 +42,48 @@ const deleteJob = payload => {
 
 // 3. Reducer
 const reducer = (state, action) => {
-    let newState
+    
     switch (action.type) {
         case SET_JOB:
-            newState = {
+            return {
                 ...state,
                 job : action.payload
             }
-            break;
+        case GET_AMOUNT:
+            return {
+                ...state,
+                amount : action.payload
+            }
         case ADD_JOB:
-            newState ={
+            return {
                 ...state,
                 jobs : [...state.jobs, action.payload]
             }
-            break;
+           
         case DELETE_JOB:
             const newJobs = [...state.jobs]
             newJobs.splice(action.payload, 1)
-            newState ={
+             return {
                 ...state,
                 jobs : newJobs
             }
-            break;
+            
         default:
             throw new Error('Invalid action,')
     }
 }
-
+console.log(initState);
 //4. Dispatch
 function Pages13() {
-    const initState = {
-        job : '',
-        jobs : []
-    }
     
     const [state, dispatch] = useReducer(reducer, initState)
     const inputRef = useRef()
-    const { job, jobs} = state
+    const { job, amount, jobs} = state
 
     const HandleAdd = () => {
-        dispatch(addJob(job))
+        dispatch(addJob(job, amount))
         dispatch(setJob(''))
+        dispatch(getAmount(''))
 
         inputRef.current.focus()
     }
@@ -84,14 +94,23 @@ function Pages13() {
                 ref={inputRef}
                 value={job}
                 placeholder='Enter here'
-            //     onChange={e => {
-            //         dispatch(setJob(e.target.value))
-            //     }}
-            />
+                onChange={e => {
+                    dispatch(setJob(e.target.value))
+                }}
+            /><br/>
+            <input 
+                type='number'
+                ref={inputRef}
+                value={amount}
+                placeholder='Enter here'
+                onChange={e => {
+                    dispatch(getAmount(e.target.value))
+                }}
+            /><br/>
             <button className='btn' onClick={HandleAdd}>ADD</button>
             <ul>
                 {jobs.map((job, index) => (
-                    <li key={index}>{job} <span onClick={() => dispatch(deleteJob(index))}>&time;</span></li>
+                    <li key={index}>{job.name} <span> giá </span> {job.amount}<span onClick={() => dispatch(deleteJob(index))}>x</span></li>
                 ))}
             </ul>
         </div>
