@@ -4,13 +4,15 @@ import './pages13.css';
 // 1. Init state
 const initState = {
     job : '',
-    amount : 0,
+    amount : '',
+    obj : {name : this.job, amount : this.amount},
     jobs : []
 }
 
 // 2. Action
 const SET_JOB = 'set_job'
 const GET_AMOUNT = 'get_amount'
+const ADD_OBJ = 'add_obj'
 const ADD_JOB = ' add_job'
 const DELETE_JOB = 'delete_job'
 
@@ -26,11 +28,16 @@ const getAmount = payload => {
         payload
     }
 }
+const addObj = payload => {
+    return {
+        type : ADD_OBJ,
+        payload
+    }
+}
 const addJob = payload => {         
     return {
         type : ADD_JOB,
-        name : payload.job,
-        amount : payload.amount
+        payload
     }
 }
 const deleteJob = payload => {         
@@ -54,12 +61,17 @@ const reducer = (state, action) => {
                 ...state,
                 amount : action.payload
             }
+        case ADD_OBJ:
+            return {
+                ...state,
+                obj : action.payload
+            }
         case ADD_JOB:
             return {
                 ...state,
                 jobs : [...state.jobs, action.payload]
             }
-           
+        
         case DELETE_JOB:
             const newJobs = [...state.jobs]
             newJobs.splice(action.payload, 1)
@@ -72,18 +84,19 @@ const reducer = (state, action) => {
             throw new Error('Invalid action,')
     }
 }
-console.log(initState);
+console.log(initState.obj);
 //4. Dispatch
 function Pages13() {
     
     const [state, dispatch] = useReducer(reducer, initState)
     const inputRef = useRef()
-    const { job, amount, jobs} = state
+    const { job, obj, amount, jobs} = state
 
     const HandleAdd = () => {
-        dispatch(addJob(job, amount))
-        dispatch(setJob(''))
+        dispatch(addJob(obj))
+        
         dispatch(getAmount(''))
+        dispatch(setJob(''))
 
         inputRef.current.focus()
     }
@@ -110,7 +123,7 @@ function Pages13() {
             <button className='btn' onClick={HandleAdd}>ADD</button>
             <ul>
                 {jobs.map((job, index) => (
-                    <li key={index}>{job.name} <span> giá </span> {job.amount}<span onClick={() => dispatch(deleteJob(index))}>x</span></li>
+                    <li key={index}>{job}<span onClick={() => dispatch(deleteJob(index))}> x</span></li>
                 ))}
             </ul>
         </div>
